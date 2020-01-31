@@ -6,6 +6,7 @@ if "%~1" neq "" goto :%~1
 PowerShell Set-ExecutionPolicy ByPass -Force
 PowerShell ./Install_requirements_2008R2.ps1 -Verbose
 echo "Requirements installed."
+Pause
 
 call :reboot part2
 goto :eof
