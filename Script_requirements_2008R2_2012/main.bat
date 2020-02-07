@@ -1,6 +1,8 @@
 @echo off
 set currentpath=%~dp0
 
+if "%~1" neq "" goto :%~1
+
 Powershell -Command "& { Start-Process \"%currentpath%requirements.bat\" -verb RunAs}"
 Pause
 
